@@ -20,18 +20,27 @@ should return "Let us get back to more Algorithms".*/
 
 function myReplace(str, before, after) {
 
-    console.log(before);  // "jumped"
-    console.log(after);  // ""leaped 
-
-    // var search = str.search(before);
+    // var search =  str.indexOf(before);
     // console.log(search);
-    // // string.replace(searchvalue, newvalue)
-    // console.log(str.replace(search, after));
+    var strArr = str.split(' ');
+    console.log(strArr); // ['A', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog']
 
-    var search =  str.indexOf(before);
-    console.log(search);
-    
-  return str;
+    var newArr = [];
+
+    var find = strArr.indexOf(before);
+    console.log(find);
+
+    var arrlen = strArr.length;
+    console.log(arrlen);
+
+    for(var i = 0; i < i < arrlen; i++){
+        if(strArr[i] === before){
+            console.log(strArr[i] = after);
+        }
+    }
+    return newArr;
+
+  //return str;
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
