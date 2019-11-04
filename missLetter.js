@@ -28,9 +28,26 @@ function fearNotLetter(str) {
         If all letters are present in the range
             return undefined
     */
+    
+    // for(var i = 0; i < str.length - 1; i++){
+    //     if(str.charCodeAt(i + 1) == str.charCodeAt(i) + 1){
+    //         //console.log("next in alphabet");
+    //         return String.fromCharCode(str.charCodeAt(i) + 1);
+    //     }
+    // }
+    
+    var strArr = str.split("");
+        for(var i = 0; i < strArr.length; i++){
+            var code = str.charCodeAt(i);
+            if( code !== str.charCodeAt(0) + i){
+                return String.fromCharCode(code -1);
+            }
+        }
+  return undefined;
 
-    // should return "d"
-  return str;
+   // should return "d"
+  //return str;
+ //consolo.log(str);
 }
 
 fearNotLetter("abce");
